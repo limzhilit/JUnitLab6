@@ -29,6 +29,11 @@ public class CalculatorTest {
         assertEquals(4, calc.mul(2,2));
     }
 
+    @Test
+    public void testDivide_Success(){
+        assertEquals(1, calc.div(2,2));
+    }
+
 
 
 
