@@ -46,6 +46,19 @@ public class CalculatorTest {
         assertEquals("Value out of range", ex.getMessage());
     }
 
+    @Test
+    public void testMul_fail(){
+        Exception ex = assertThrows(ArithmeticException.class, () -> calc.mul(Integer.MAX_VALUE, 4));
+        assertEquals("integer overflow", ex.getMessage());
+    }
+
+    @Test
+    public void testDiv_fail(){
+        Exception ex = assertThrows(ArithmeticException.class, () -> calc.div(1, 0));
+        assertEquals("division by zero", ex.getMessage());
+    }
+
+
 
 
 
