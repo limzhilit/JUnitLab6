@@ -34,6 +34,20 @@ public class CalculatorTest {
         assertEquals(1, calc.div(2,2));
     }
 
+    @Test
+    public void testAdd_fail(){
+        Exception ex = assertThrows(ArithmeticException.class, () -> calc.add(Integer.MAX_VALUE, 1));
+        assertEquals("Value out of range", ex.getMessage());
+    }
+
+    @Test
+    public void testSub_fail(){
+        Exception ex = assertThrows(ArithmeticException.class, () -> calc.sub(Integer.MIN_VALUE, 1));
+        assertEquals("Value out of range", ex.getMessage());
+    }
+
+
+
 
 
 
