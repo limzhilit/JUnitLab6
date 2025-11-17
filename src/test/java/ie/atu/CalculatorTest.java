@@ -24,6 +24,12 @@ public class CalculatorTest {
         assertEquals(0, calc.sub(2,2));
     }
 
+    @Test
+    public void testMultiply_Success(){
+        assertEquals(4, calc.mul(2,2));
+    }
+
+
 
 
 }
