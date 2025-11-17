@@ -8,6 +8,8 @@ public class Calculator {
   }
 
   public int sub(int a, int b) {
+    if (a == Integer.MIN_VALUE || b == Integer.MIN_VALUE)
+      throw new ArithmeticException("Value out of range");
     return a - b;
   }
 
