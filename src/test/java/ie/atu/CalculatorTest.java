@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
     Calculator calc;
@@ -17,4 +18,12 @@ public class CalculatorTest {
     public void testAdd_Success(){
         assertEquals(4, calc.add(2,2));
     }
+
+    @Test
+    public void testSubtract_Success(){
+        assertEquals(0, calc.sub(2,2));
+    }
+
+
+
 }
